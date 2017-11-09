@@ -1,2 +1,2 @@
-const landingPageClick = require("./landingPageClick")
+const landingPageClick = require("./User/landingPageClick")
 landingPageClick()

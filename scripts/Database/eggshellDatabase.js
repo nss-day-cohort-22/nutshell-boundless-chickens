@@ -1,5 +1,5 @@
 // Database for whole application
-const landingPageObject = require("./landingPageClick")
+const landingPageObject = require("./../User/landingPageClick")
 
 const eggshellDatabase = {
 	"users": [],
