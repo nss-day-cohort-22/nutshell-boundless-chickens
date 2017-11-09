@@ -1,8 +1,8 @@
 const eggShellDatabase = require("./eggshellDatabase")
-
-const setDatabase = function () {
-	const stringyBase =	JSON.stringify(eggShellDatabase)
-	localStorage.setItem("eggshellDatabase", stringyBase)
+// Allows for whatever is to be pushed in as the modified database to be named through parameter
+const setDatabase = function (toSet) {
+	const stringy =	JSON.stringify(toSet)
+	localStorage.setItem("eggshellDatabase", stringy)
 }
 
 module.exports = setDatabase

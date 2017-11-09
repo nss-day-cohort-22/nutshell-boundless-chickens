@@ -1,12 +1,11 @@
-// Generates Unique Id's for all of application
 
-const idMaker = function* (startFrom = 0) {
-	let id = 1
+const idMaker = function* (id) {
 
 	while (true) {
-		yield id + startFrom
+		yield id + 1   
 		id++
 	}
 }
 
+// module.exports = idMaker
 module.exports = idMaker

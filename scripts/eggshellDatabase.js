@@ -8,9 +8,12 @@ const eggshellDatabase = {
 	"friends": [],
 	"tasks": []
 }
-
 module.exports = eggshellDatabase
-
+// ensures that if there isn't an object in local storage, the blank one is put there, and ensures that it doesn't reset the local storage object if the database is already present
+if(JSON.parse(localStorage.getItem("eggshellDatabase")) === null ){
+	const stringyEgg = JSON.stringify(eggshellDatabase)
+	localStorage.setItem("eggshellDatabase", stringyEgg)
+}
 
 // const eggshellDatabase = {
 // 	"users": [

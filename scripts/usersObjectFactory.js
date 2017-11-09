@@ -1,8 +1,11 @@
 // Creates user object
 
 const idMaker = require("./idGenerator")
+const Db = require("./getDatabaseLocal")
 
-const userId = idMaker()
+const id = Db().users.length
+
+const userId = idMaker(id)
 
 
 const userObject = () => {
