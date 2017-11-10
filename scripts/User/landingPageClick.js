@@ -31,6 +31,7 @@ const landingPageClick = function () {
 					sessionStorage.setItem("activeUser", stringyUserObject)
 					hide(loginRegisterArticle)
 					reveal(dashBoardArticle)
+					// Display dashboard
 				} else {
 					alert("Username/Email not recognized. YOU SHALL NOT PASS!!")
 				}
@@ -43,21 +44,25 @@ const landingPageClick = function () {
 				const emailValidation = document.querySelector("input[name='email']").value
 				const usernameValidation = document.querySelector("input[name='username']").value
 				const parsedDatabase = getDatabase()
+				// Ensures no one can register blank fields
+				if (emailValidation === "" || usernameValidation === ""){
+					alert("No blank fields!!")
+				}else{
 				// Checks email and username field to ensure they arent used in local storage already 
-				if(parsedDatabase.users.find((object) => {
-					return object.email === emailValidation 
-				}) || parsedDatabase.users.find((object)=>{
-						return object.username === usernameValidation
-					})){
-					alert("Username or Email is already in use")
-				}else {
-					formToSession()
-					parsedDatabase.users.push(userObjectFactory())
-					// CLear session storage and push the userObjectFactory into session storage?^
-					setDatabase(parsedDatabase)
-					alert("Account created! Log in to get started now!")
-					location.reload(true)
-					// Show dashboard and hide form in index.html
+					if(parsedDatabase.users.find((object) => {
+						return object.email === emailValidation 
+					}) || parsedDatabase.users.find((object)=>{
+							return object.username === usernameValidation
+						})){
+						alert("Username or Email is already in use")
+					}else {
+						formToSession()
+						parsedDatabase.users.push(userObjectFactory())
+						// CLear session storage and push the userObjectFactory into session storage?^
+						setDatabase(parsedDatabase)
+						alert("Account created! Log in to get started now!")
+						location.reload(true)
+					}
 				}
 			} )
 		}
