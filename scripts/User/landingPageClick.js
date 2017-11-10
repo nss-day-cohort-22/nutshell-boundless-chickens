@@ -10,7 +10,6 @@ const setDatabase = require("./../Database/setDatabaseLocal")
 const hide = require("./../Dashboard/hide")
 const reveal = require("./../Dashboard/reveal")
 
-
 const landingPageClick = function () {
 	const loginRegisterArticle = document.getElementById("login_register")
 	const dashBoardArticle = document.getElementById("dashboard")
@@ -36,7 +35,6 @@ const landingPageClick = function () {
 					alert("Username/Email not recognized. YOU SHALL NOT PASS!!")
 				}
 			})
-			// document.querySelector("")
 		} else if (event.target.id.startsWith("register")){
 			//insert register function
 			registration()
