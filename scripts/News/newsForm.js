@@ -1,17 +1,17 @@
 
 
 const newsForm = function () {
-	const newsArticle = document.getElementById("news_section")
+	const newsArticle = document.getElementById("dashboard")
 	newsArticle.innerHTML = `
   <form>
   Url:
-  <input type="text" name="url"><br>
+  <input id="url" type="text" name="url"><br>
   Title: 
-  <input type="text" name="title">
+  <input id="title" type="text" name="title">
   Synopsis:
-  <input type="text" name="synopsis">
+  <input id="synopsis" type="text" name="synopsis">
   </form>
-  <button>Submit</button>
+  <button id="news-submit">Submit</button>
   `
 }
 

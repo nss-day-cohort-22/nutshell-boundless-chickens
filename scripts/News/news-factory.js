@@ -1,18 +1,24 @@
 const idMaker = require("./../idGenerator")
+const userID = require("./../User/landingPageClick")
+const newsForm = require("./newsForm")
+const Db = require("./../Database/getDatabaseLocal")
 
-const newsId = idMaker(newsId)
+const id = Db().news.length
+const idForNews = idMaker(id)
 
-const newsObject = () => {
+const newsObjectBuilder = function (url, title, synopsis) {
+
+	// const newsObject = () => {
 	// const userId = JSON.parse(sessionStorage.getItem("username"))
 	return Object.create(null, {
 		"newsId": {
 			//this will invoke the generator function
-			value: newsId.next().value,
+			value: idForNews.next().value,
 			enumerable: true
 		},
 		// "userId": {
 		// 	//this needs to pull from the current users ID
-		// 	value: userId,
+		// 	value: userID.getItem(stringyUserObject.id),
 		// 	enumerable: true,
 		// 	writable : true
 		// },
@@ -32,4 +38,7 @@ const newsObject = () => {
 			writable : true
 		}
 	})
+	// }
 }
+module.exports = newsObjectBuilder
+
