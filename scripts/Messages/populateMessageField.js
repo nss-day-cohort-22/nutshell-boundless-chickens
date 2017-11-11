@@ -14,6 +14,7 @@ const populateMessageField = function () {
         <button id="message_send">Send</button>
         <button id="editMessageButton">Edit Last Message</button>
         <button id="topOfChat">Earliest Messages</button>
+        <button id="refreshChat">Refresh</button>
       </section>
     </article>
   `
