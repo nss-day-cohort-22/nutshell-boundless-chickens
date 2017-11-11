@@ -21,8 +21,8 @@ const landingPageClick = function () {
 			document.querySelector("button").addEventListener("click", () =>{
 				const emailValidation = document.querySelector("input[name='email']").value
 				const usernameValidation = document.querySelector("input[name='username']").value
-				const parsedDatabase = getDatabase()
-				const foundAccount = parsedDatabase.users.find((object) => {
+				const userDatabase = getDatabase()
+				const foundAccount = userDatabase.users.find((object) => {
 					return object.email === emailValidation && object.username === usernameValidation
 				})
 				if (foundAccount){
