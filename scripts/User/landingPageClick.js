@@ -12,7 +12,7 @@ const reveal = require("./../Dashboard/reveal")
 
 const landingPageClick = function () {
 	const loginRegisterArticle = document.getElementById("login_register")
-	const dashBoardArticle = document.getElementById("dashboard")
+	const navigation = document.getElementById("navigation")
 	loginRegisterArticle.addEventListener("click", loginRegisterClickEvent)
 	function loginRegisterClickEvent() {
 		if (event.target.id.startsWith("login")){
@@ -29,7 +29,7 @@ const landingPageClick = function () {
 					const stringyUserObject = JSON.stringify(foundAccount)
 					sessionStorage.setItem("activeUser", stringyUserObject)
 					hide(loginRegisterArticle)
-					reveal(dashBoardArticle)
+					reveal(navigation)
 					// Display dashboard
 				} else {
 					alert("Username/Email not recognized. YOU SHALL NOT PASS!!")
