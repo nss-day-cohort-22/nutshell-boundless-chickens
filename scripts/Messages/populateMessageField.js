@@ -12,6 +12,7 @@ const populateMessageField = function () {
         Message:
         <input id="message_field" placeholder="your message here" maxlength="140">
         <button id="message_send">Send</button>
+        <button id="editMessageButton">Edit Last Message</button>
         <button id="topOfChat">Earliest Messages</button>
       </section>
     </article>

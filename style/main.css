@@ -27,7 +27,13 @@
   overflow: auto;
 }
 
+.userTag {
+  color: goldenrod;
+}
 
+.userMessage {
+  color: rgb(80, 7, 7);
+}
 
 
 
