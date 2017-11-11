@@ -2,8 +2,6 @@ const messageObj = require("./messageObjFactory")
 const Db = require("./../Database/getDatabaseLocal")
 const setDb = require("./../Database/setDatabaseLocal")
 const displayMessages = require("./displaySentMessages")
-const closeModal = require("./../Dashboard/closeModal")
-const populateMessageField = require("./populateMessageField")
 const hide = require("./../Dashboard/hide")
 const reveal = require("./../Dashboard/reveal")
 

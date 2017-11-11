@@ -3,6 +3,8 @@ const reveal = require("./../Dashboard/reveal")
 const sendMessage = require("./sendMessage")
 const closeModal = require("./../Dashboard/closeModal")
 const toTop = require("./toTopOfChat")
+const hasJoinedChat = require("./joinedChat")
+const userIsTyping = require("./userIsTyping")
 
 const messageSectionTarget = function () {
 	const dashboardSection = document.getElementById("dashboard")
@@ -10,9 +12,21 @@ const messageSectionTarget = function () {
 	messageSection.addEventListener("click", () => {
 		reveal(dashboardSection)
 		populateMessageField()
-		sendMessage()
-		closeModal()
-		toTop()
+		const messageKeyupRecord = document.getElementById("message_field")
+		messageKeyupRecording = document.getElementById("message_field").value
+		messageKeyupRecord.addEventListener("keyup", userIsTyping())
+		console.log(userIsTyping())
+		// joined Chat
+		if(!userIsTyping()){
+			hasJoinedChat()
+			sendMessage()
+			closeModal()
+			toTop()
+		}else {
+			sendMessage()
+			closeModal()
+			toTop()
+		}
 	})
 }
 
