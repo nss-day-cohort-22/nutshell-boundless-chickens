@@ -1,6 +1,5 @@
 const idMaker = require("./../idGenerator")
 const Db = require("./../Database/getDatabaseLocal")
-// const currentMessage = require("./sendMessage")
 
 
 

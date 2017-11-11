@@ -1,3 +1,5 @@
+// Removes section entirely, not just hidden
+
 const refresh = function () {
 	const modalArea = document.getElementById("modal_messages")
 	const dash = document.getElementById("dashboard")

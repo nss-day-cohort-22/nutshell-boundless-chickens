@@ -1,4 +1,4 @@
-// Creates message modal, and supplies option to close
+// Creates message modal
 
 
 const populateMessageField = function () {

@@ -1,3 +1,5 @@
+// May be useless .. 
+
 const hideAll = function (except){
 	document.getElementById("tasks_section").classList.add("hidden")
 	document.getElementById("events_section").classList.add("hidden")

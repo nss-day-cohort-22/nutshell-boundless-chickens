@@ -21,24 +21,22 @@ const editMessage = function () {
 		}else {
 			textField.value = matchedMessage.message
 			document.getElementById("message_send").removeEventListener("click",sendFunction)
-			document.getElementById("message_send").addEventListener("click", () => {
-				// textField.value = matchedMessage.message      
+			document.getElementById("message_send").addEventListener("click", editSend = () => {
 				matchedMessage.message = textField.value
-				console.log(matchedMessage)
+				// console.log(matchedMessage)
 				setBackAfterEdit(matchedMessage)
 				setBackAfterEdit(Db)
 				alert("edited, close window and open again to see")
-				// textField.value =""
+				textField.value =""
 				refreshEdit(document.getElementById("modal_messages"))
-				displayEdit()
 				editedMessage(document.getElementById("modal_messages"))
+				displayEdit()
 				const modal = document.getElementById("modal_messages")
 				modal.scrollTo(0, modal.scrollHeight)
 				document.getElementById("message_send").addEventListener("click",sendFunction)
+				document.getElementById("message_send").removeEventListener("click", editSend)				
 			})
 		}
-		// if most recent message evaluated contains "has joined the chat" then throw an error
-    
 	})   
 }
 
