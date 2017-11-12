@@ -16,14 +16,14 @@ const editMessage = function () {
 		let matchedMessage = Db.messages.find((current) =>{
 			return current.id === messageToGrab
 		})
-		if (matchedMessage.message.includes("has joined the chat")){
-			alert("Cannot edit a join message")
+		let activeUser = JSON.parse(sessionStorage.getItem("activeUser"))
+		if (matchedMessage.message.includes("has joined the chat") || matchedMessage.userId !== activeUser.username){
+			alert("Cannot edit a join message/ previous message has been active too long  ")
 		}else {
 			textField.value = matchedMessage.message
 			document.getElementById("message_send").removeEventListener("click",sendFunction)
 			document.getElementById("message_send").addEventListener("click", editSend = () => {
 				matchedMessage.message = textField.value
-				// console.log(matchedMessage)
 				setBackAfterEdit(matchedMessage)
 				setBackAfterEdit(Db)
 				alert("edited, close window and open again to see")
