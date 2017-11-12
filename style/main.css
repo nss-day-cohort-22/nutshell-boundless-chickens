@@ -9,7 +9,7 @@
   left: 0;
   top: 0;
   margin: 5%;
-  width: 80%;
+  width: 85%;
   height: 85%;
 
   overflow: auto; /* Enable scroll if needed */
@@ -19,7 +19,7 @@
 
 #modal_content {
   border-radius: 50px;
-  background-color: lightblue;
+  background-color: cornflowerblue;
   margin: auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
@@ -33,6 +33,61 @@
 
 .userMessage {
   color: rgb(80, 7, 7);
+}
+
+#greeting {
+  text-align: center;
+  color:maroon;
+}
+
+body {
+  /* background: url("http://www.clipartpal.com/_thumbs/pd/holiday/easter/Easter_egg_blue.png"); */
+  /* position: relative; */
+  /* background-repeat:  */
+  /* background-size:100% 100vh; */
+  background-color: lightblue;
+}
+
+#login_register{
+  text-align: center;
+  margin-top: 20%;
+}
+
+#nav_wrap{
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+#nav_wrap section{
+  color: maroon;
+  cursor: pointer;
+  background-color: lightblue;
+}
+
+#close {
+  color: black;
+  float: right;
+  font-size: 2.5em;
+  font-weight: bold;
+  z-index: 3;
+  position: sticky;
+  top: 0;
+}
+
+#close:hover,
+#close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 1.8em;
 }
 
 

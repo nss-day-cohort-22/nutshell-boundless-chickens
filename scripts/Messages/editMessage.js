@@ -2,7 +2,6 @@ const DbForEditing = require("./../Database/getDatabaseLocal")
 const setBackAfterEdit = require("./../Database/setDatabaseLocal")
 const refreshEdit = require("./../Dashboard/hide")
 const editedMessage = require("./../Dashboard/reveal")
-const displayEdit = require("./displaySentMessages")
 
 const editMessage = function () {
 	const textField = document.getElementById("message_field")
@@ -26,11 +25,10 @@ const editMessage = function () {
 				matchedMessage.message = textField.value
 				setBackAfterEdit(matchedMessage)
 				setBackAfterEdit(Db)
-				alert("edited, close window and open again to see")
+				alert("edited, close window and open again or send another message to see")
 				textField.value =""
 				refreshEdit(document.getElementById("modal_messages"))
 				editedMessage(document.getElementById("modal_messages"))
-				displayEdit()
 				const modal = document.getElementById("modal_messages")
 				modal.scrollTo(0, modal.scrollHeight)
 				document.getElementById("message_send").addEventListener("click",sendFunction)

@@ -4,8 +4,8 @@
 const populateMessageField = function () {
 	document.getElementById("dashboard").innerHTML = `
     <article id="modal_messages">
+    <span id="close">&times;</span>
       <section id="modal_content">
-        <span id="close">&times;</span>
         <h3>Messages</h3>
         <article id="messages_inject">
         </article>

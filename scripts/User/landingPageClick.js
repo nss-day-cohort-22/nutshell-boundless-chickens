@@ -9,6 +9,7 @@ const getDatabase = require("./../Database/getDatabaseLocal")
 const setDatabase = require("./../Database/setDatabaseLocal")
 const hide = require("./../Dashboard/hide")
 const reveal = require("./../Dashboard/reveal")
+const greetUser = require("./welcomeUser")
 
 const landingPageClick = function () {
 	const loginRegisterArticle = document.getElementById("login_register")
@@ -29,6 +30,7 @@ const landingPageClick = function () {
 					const stringyUserObject = JSON.stringify(foundAccount)
 					sessionStorage.setItem("activeUser", stringyUserObject)
 					hide(loginRegisterArticle)
+					greetUser()
 					reveal(navigation)
 					// Display dashboard
 				} else {
