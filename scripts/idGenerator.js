@@ -1,4 +1,4 @@
-
+// Generates ids
 const idMaker = function* (id) {
 
 	while (true) {
