@@ -5,9 +5,7 @@ const newsObject = require("./news-factory")
 // console.log(submitNews)
 
 const newSubmitClick = function (event) {
-	console.log("event fired!!!")
 	if (event.target.id === "news-submit") {
-		console.log("inside if!!!")
 		const url = document.getElementById("url").value
 		const title = document.getElementById("title").value
 		const synopsis = document.getElementById("synopsis").value

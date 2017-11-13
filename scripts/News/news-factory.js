@@ -25,7 +25,7 @@ const newsObjectBuilder = function (url, title, synopsis) {
 		"url": {
 			value: url,
 			enumerable: true,
-			writable : true
+			writable : true				
 		},
 		"title": {
 			value: title,
