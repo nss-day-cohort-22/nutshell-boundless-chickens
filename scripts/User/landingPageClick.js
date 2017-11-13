@@ -1,4 +1,4 @@
-// Function for button click from landing page
+// Function for button clicks  from landing page to dashboard reveal
 
 const registration = require("./register")
 const login = require("./login")
@@ -10,6 +10,7 @@ const setDatabase = require("./../Database/setDatabaseLocal")
 const hide = require("./../Dashboard/hide")
 const reveal = require("./../Dashboard/reveal")
 const greetUser = require("./welcomeUser")
+const logout = require("./logOut")
 
 const landingPageClick = function () {
 	const loginRegisterArticle = document.getElementById("login_register")
@@ -31,6 +32,7 @@ const landingPageClick = function () {
 					sessionStorage.setItem("activeUser", stringyUserObject)
 					hide(loginRegisterArticle)
 					greetUser()
+					logout()
 					reveal(navigation)
 					// Display dashboard
 				} else {

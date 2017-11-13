@@ -19,7 +19,7 @@
 
 #modal_content {
   border-radius: 50px;
-  background-color: cornflowerblue;
+  background-color: rgb(48, 91, 167);
   margin: auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
@@ -28,11 +28,13 @@
 }
 
 .userTag {
-  color: goldenrod;
+  color:rgb(80, 7, 7);
+  font-size: 2em;
 }
 
 .userMessage {
-  color: rgb(80, 7, 7);
+  color: goldenrod;
+  font-size: 2em;
 }
 
 #greeting {
@@ -41,11 +43,12 @@
 }
 
 body {
-  /* background: url("http://www.clipartpal.com/_thumbs/pd/holiday/easter/Easter_egg_blue.png"); */
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVy_UlvjeJr4FLNMbfIBR2pv5BhPZriN9lhbBqLvYoZCiS4uaw_Q");
   /* position: relative; */
   /* background-repeat:  */
   /* background-size:100% 100vh; */
-  background-color: lightblue;
+  /* background-color: lightblue; */
+
 }
 
 #login_register{
@@ -60,9 +63,12 @@ body {
 }
 
 #nav_wrap section{
-  color: maroon;
   cursor: pointer;
-  background-color: lightblue;
+  font-size: 1.2em;
+}
+
+#nav_wrap section:hover {
+  color:yellow;
 }
 
 #close {
@@ -92,3 +98,45 @@ h2 {
 
 
 
+/* button:focus {
+  background-color:rgb(231, 231, 19);
+} */
+button:focus {
+  outline-style: none;
+  background-color: yellow;
+}
+button {
+  height: 5em;
+  width: 5em;
+  background-color: rgb(233, 167, 13);
+  border-radius: 50px;
+  font-size: 1em;
+}
+
+#buttonWrap {
+  display:flex;
+  justify-content: space-between;
+}
+
+#logoutButton {
+  /* position:absolute;
+  top:0;
+  right:0; */
+  font-size:2em;
+  text-align: right;
+}
+
+#logoutButton:hover {
+  cursor: pointer;
+  color: yellow;
+}
+
+input:focus{
+  color: white;
+  background-color:gold;
+}
+
+input {
+  font-size: 2em;
+  height: 1.5em;  
+}

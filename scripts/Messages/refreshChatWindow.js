@@ -1,5 +1,6 @@
 const display = require("./displaySentMessages")
 
+// Adding refresh functionality to the refresh button
 
 const refreshChatWindow = function() {
 	document.getElementById("refreshChat").addEventListener("click", () =>{

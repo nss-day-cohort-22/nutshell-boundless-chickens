@@ -1,7 +1,7 @@
 const idMaker = require("./../idGenerator")
 const Db = require("./../Database/getDatabaseLocal")
 
-
+// Generates the messge object to be pushed in to local storage
 
 const messageObject = (message) => {
 	const id = Db().messages.length

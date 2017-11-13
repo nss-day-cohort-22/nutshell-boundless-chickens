@@ -5,7 +5,7 @@ const showJoinMessage = require("./displaySentMessages")
 const hide = require("./../Dashboard/hide")
 const reveal = require("./../Dashboard/reveal")
 
-
+// Generates a 'Joined chat' message to be sent when message section is clicked on, 
 const joinedChat = function () {
 	const input = document.getElementById("message_field")  
 	input.value = `${JSON.parse(sessionStorage.getItem("activeUser")).username} has joined the chat.`		

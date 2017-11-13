@@ -3,13 +3,14 @@ const setBackAfterEdit = require("./../Database/setDatabaseLocal")
 const refreshEdit = require("./../Dashboard/hide")
 const editedMessage = require("./../Dashboard/reveal")
 
+// Checks to ensure that the user has not selected a message they have not sent, or a 'Joined chat' message. Populates the textfield with the most recently sent message from the user and allows it to be changed then inserted. 
+
 const editMessage = function () {
 	const textField = document.getElementById("message_field")
 	const editButton =	document.getElementById("editMessageButton")
 	editButton.addEventListener("click", () =>{
 		console.log("A go for editing")
 		textField.value = ""
-    
 		const Db = DbForEditing()
 		let messageToGrab = Db.messages.length
 		let matchedMessage = Db.messages.find((current) =>{
