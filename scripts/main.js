@@ -1,14 +1,7 @@
 const landingPageClick = require("./User/landingPageClick")
-<<<<<<< HEAD
-const newsSectionClick = require("./News/news-select")
-const newsSubmitClick = require("./News/newsSubmitClick")
-
-
-landingPageClick()
-newsSectionClick()
-
-=======
 const messages_select = require("./Messages/messages_select")
+const news_select = require("./News/news-select")
+
 landingPageClick()
 messages_select()
->>>>>>> master
+news_select()

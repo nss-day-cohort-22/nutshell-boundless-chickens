@@ -1,10 +1,12 @@
 const idMaker = require("./../idGenerator")
 const userID = require("./../User/landingPageClick")
-const newsForm = require("./newsForm")
+const newsForm = require("./populateNewsField")
 const Db = require("./../Database/getDatabaseLocal")
 
 const id = Db().news.length
 const idForNews = idMaker(id)
+
+const currentUser = JSON.parse(sessionStorage.getItem("activeUser")).username
 
 const newsObjectBuilder = function (url, title, synopsis) {
 
@@ -16,12 +18,12 @@ const newsObjectBuilder = function (url, title, synopsis) {
 			value: idForNews.next().value,
 			enumerable: true
 		},
-		// "userId": {
-		// 	//this needs to pull from the current users ID
-		// 	value: userID.getItem(stringyUserObject.id),
-		// 	enumerable: true,
-		// 	writable : true
-		// },
+		"userId": {
+			//this pulls from the current users ID
+			value: currentUser,
+			enumerable: true,
+			writable : true
+		},
 		"url": {
 			value: url,
 			enumerable: true,
