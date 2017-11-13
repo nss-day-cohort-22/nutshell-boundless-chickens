@@ -1,5 +1,8 @@
 const newsObject = require("./news-factory")
 const populateNews = require("./populateNewsField")
+const getData = require("./../Database/getDatabaseLocal")
+const setData = require("./../Database/setDatabaseLocal")
+const displayNews = require("./displayNewsArt")
 
 const newSubmitClick = function () {
 	document.addEventListener("click", (event) => {
@@ -7,10 +10,23 @@ const newSubmitClick = function () {
 			const url = document.getElementById("url").value
 			const title = document.getElementById("title").value
 			const synopsis = document.getElementById("synopsis").value
+			const date = document.getElementById("date")
+
 		
-			const newNews = newsObject(url, title, synopsis)
-			console.log(newNews)
+			// const newNews = newsObject(url, title, synopsis)
+			// let newsArray = []
+			// newsArray.push(newNews)
+
+			
+			const parsedData = getData()
+			parsedData.news.push(newsObject(url, title, synopsis, date))
+			setData(parsedData)
+			document.getElementById("news-inject").innerHTML =""
+			displayNews()
+
+
 		}
+		
 	} )
 }
 
