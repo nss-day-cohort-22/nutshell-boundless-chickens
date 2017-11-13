@@ -5,17 +5,25 @@
   <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
+  <p id= "logoutButton" class="hidden">Logout</p>
   <article id="login_register">
     <h1>Welcome to Eggshell</h1>
     <button id="login_section">Login</button>
     <button id="register_section">Register</button>    
   </article>
+  <article id="greeting">
+
+  </article>
+  <article id="navigation" class="hidden">
+    <div id="nav_wrap">
+      <section id="tasks_section"><h2>Tasks</h2></section>
+      <section id="events_section"><h2>Events</h2></section>
+      <section id="messages_section"><h2>Messages</h2></section>
+      <section id="news_section"><h2>News</h2></section>
+      <section id="friends_section"><h2>Friends</h2></section>
+    </div>
+</article>  
   <article id="dashboard" class="hidden">
-    <section id="tasks_section">tasks_section</section>
-    <section id="events_section">events_section</section>
-    <section id="messages_section">messages_section</section>
-    <section id="news_section"><h3>News</section>
-    <section id="friends_section">friends_section</section>  
   </article>
 </body>
   <script src="build/bundle.js"></script>

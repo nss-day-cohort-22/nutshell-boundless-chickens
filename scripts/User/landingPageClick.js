@@ -1,4 +1,4 @@
-// Function for button click from landing page
+// Function for button clicks  from landing page to dashboard reveal
 
 const registration = require("./register")
 const login = require("./login")
@@ -9,10 +9,12 @@ const getDatabase = require("./../Database/getDatabaseLocal")
 const setDatabase = require("./../Database/setDatabaseLocal")
 const hide = require("./../Dashboard/hide")
 const reveal = require("./../Dashboard/reveal")
+const greetUser = require("./welcomeUser")
+const logout = require("./logOut")
 
 const landingPageClick = function () {
 	const loginRegisterArticle = document.getElementById("login_register")
-	const dashBoardArticle = document.getElementById("dashboard")
+	const navigation = document.getElementById("navigation")
 	loginRegisterArticle.addEventListener("click", loginRegisterClickEvent)
 	function loginRegisterClickEvent() {
 		if (event.target.id.startsWith("login")){
@@ -21,15 +23,17 @@ const landingPageClick = function () {
 			document.querySelector("button").addEventListener("click", () =>{
 				const emailValidation = document.querySelector("input[name='email']").value
 				const usernameValidation = document.querySelector("input[name='username']").value
-				const parsedDatabase = getDatabase()
-				const foundAccount = parsedDatabase.users.find((object) => {
+				const userDatabase = getDatabase()
+				const foundAccount = userDatabase.users.find((object) => {
 					return object.email === emailValidation && object.username === usernameValidation
 				})
 				if (foundAccount){
 					const stringyUserObject = JSON.stringify(foundAccount)
 					sessionStorage.setItem("activeUser", stringyUserObject)
 					hide(loginRegisterArticle)
-					reveal(dashBoardArticle)
+					greetUser()
+					logout()
+					reveal(navigation)
 					// Display dashboard
 				} else {
 					alert("Username/Email not recognized. YOU SHALL NOT PASS!!")

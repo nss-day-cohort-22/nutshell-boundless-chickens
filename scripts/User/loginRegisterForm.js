@@ -4,9 +4,9 @@ const loginRegisterForm = function () {
 	loginRegisterArticle.innerHTML = `
   <form>
   Username:
-  <input type="text" name="username"><br>
+  <input type="text" name="username" required><br>
   Email: 
-  <input type="email" name="email">
+  <input type="email" name="email" required>
   </form>
   <button>Submit</button>
   `
