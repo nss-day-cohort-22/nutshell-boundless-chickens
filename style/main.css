@@ -141,7 +141,9 @@ input {
   height: 1.5em;  
 }
 
-#userClickedInMessage:hover {
+.userTag:hover {
   cursor:pointer;
   color:White;
 }
+
+

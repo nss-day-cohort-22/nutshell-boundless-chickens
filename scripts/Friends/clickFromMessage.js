@@ -17,8 +17,8 @@ const userClickedFromChat = function () {
 			activeFriendsOfuser()
 			closeFriendModal()
 			friendSearch()
-			let friendSearchBarValue = document.getElementById("searchFriendValue").value    
-			friendSearchBarValue = `${captureUserClick}`
+			let friendSearchBarValue = document.getElementById("searchFriendValue")   
+			friendSearchBarValue.value = captureUserClick
 		})
 	}
 }

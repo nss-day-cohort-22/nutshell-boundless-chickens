@@ -1,3 +1,5 @@
+// adds the inital setup for the friends section
+
 const populateFriendsModal = function () {
 	document.getElementById("dashboard").innerHTML= `
   <article id="modal_messages">
