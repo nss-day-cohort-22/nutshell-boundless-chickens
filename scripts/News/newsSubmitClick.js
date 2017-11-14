@@ -13,11 +13,7 @@ const newSubmitClick = function () {
 			const date = document.getElementById("date")
 
 		
-			// const newNews = newsObject(url, title, synopsis)
-			// let newsArray = []
-			// newsArray.push(newNews)
-
-			
+			// parses from eggshell database and display in inner HTML
 			const parsedData = getData()
 			parsedData.news.push(newsObject(url, title, synopsis, date))
 			setData(parsedData)

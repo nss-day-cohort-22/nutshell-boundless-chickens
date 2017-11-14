@@ -8,10 +8,10 @@ const populateNewsField = function () {
       <section id="modal_content">
           <h3>Add your news article here</h3>
           <div id="news-field">
-          Url:
-          <input id="url" type="text" name="url"><br>
           Title: 
           <input id="title" type="text" name="title">
+          Url:
+          <input id="url" type="text" name="url"><br>
           Synopsis:
           <input id="synopsis" type="text" name="synopsis">
           </div>
