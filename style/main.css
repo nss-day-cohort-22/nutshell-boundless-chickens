@@ -141,9 +141,29 @@ input {
   height: 1.5em;  
 }
 
+/* news styling */
+/* article display styling */
+.articleDisplay {
+  padding: 10px;
+  margin: 10px;
+  background-color: #585554;
+  text-align: center;
+}
+
+/* article form */
+.article-form {
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  color: white;
+}
+
+.input {
+  padding: 10px;
+  margin: 10px;
+}
+=======
 .userTag:hover {
   cursor:pointer;
   color:White;
 }
-
-
