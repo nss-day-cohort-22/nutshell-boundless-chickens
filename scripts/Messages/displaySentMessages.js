@@ -6,7 +6,7 @@ const displaySent = function () {
 	const database = Db()
 	database.messages.forEach((current)=>{
 		messagesInjection.innerHTML += `
-			<h3 class="userTag">User: ${current.userId}<h3>
+			<h3 class="userTag">User: ${current.userId}</h3>
 			<p class="userMessage">${current.message}</p>
 		`
 	})

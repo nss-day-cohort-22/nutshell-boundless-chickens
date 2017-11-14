@@ -2,6 +2,7 @@ const idMaker = require("./../idGenerator")
 const userID = require("./../User/landingPageClick")
 const newsForm = require("./populateNewsField")
 const Db = require("./../Database/getDatabaseLocal")
+const dateStamp = require("./date")
 
 
 
@@ -39,7 +40,7 @@ const newsObjectBuilder = function (url, title, synopsis) {
 			writable : true
 		},
 		"date": {
-			value: Date.now(),
+			value: dateStamp(),
 			enumerable: true,
 			writable : true
 		}

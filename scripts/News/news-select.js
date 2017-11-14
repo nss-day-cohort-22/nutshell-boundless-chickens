@@ -1,4 +1,3 @@
-// const hideAllExcept = require("./../Dashboard/hideAll_except")
 const newsForm = require("./../News/populateNewsField")
 const reveal = require("./../Dashboard/reveal")
 const newSubmitClick = require("./newsSubmitClick")
@@ -15,8 +14,6 @@ const newsSectionTarget = function () {
 		closeModal()
 	})
 }
-
-
 
 module.exports = newsSectionTarget
 
