@@ -3,12 +3,11 @@ const userID = require("./../User/landingPageClick")
 const newsForm = require("./populateNewsField")
 const Db = require("./../Database/getDatabaseLocal")
 
-const id = Db().news.length
-const idForNews = idMaker(id)
 
-const currentUser = JSON.parse(sessionStorage.getItem("activeUser")).username
 
 const newsObjectBuilder = function (url, title, synopsis) {
+	const id = Db().news.length
+	const idForNews = idMaker(id)
 
 	// const newsObject = () => {
 	// const userId = JSON.parse(sessionStorage.getItem("username"))
@@ -20,7 +19,7 @@ const newsObjectBuilder = function (url, title, synopsis) {
 		},
 		"userId": {
 			//this pulls from the current users ID
-			value: currentUser,
+			value: JSON.parse(sessionStorage.getItem("activeUser")).username,
 			enumerable: true,
 			writable : true
 		},
@@ -36,6 +35,11 @@ const newsObjectBuilder = function (url, title, synopsis) {
 		},
 		"synopsis": {
 			value: synopsis,
+			enumerable: true,
+			writable : true
+		},
+		"date": {
+			value: Date.now(),
 			enumerable: true,
 			writable : true
 		}
