@@ -140,3 +140,8 @@ input {
   font-size: 2em;
   height: 1.5em;  
 }
+
+#userClickedInMessage:hover {
+  cursor:pointer;
+  color:White;
+}

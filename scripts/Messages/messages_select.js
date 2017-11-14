@@ -7,6 +7,8 @@ const hasJoinedChat = require("./joinedChat")
 const userIsTyping = require("./userIsTyping")
 const editMessage = require("./editMessage")
 const refreshButton = require("./refreshChatWindow")
+const userClickAffordance = require("./../Friends/clickFromMessage")
+
 
 // Sets up the ability for a message to be pushed into the chat bubble, saved in local storage, be primed for editing, and register when a user has joined chat
 const messageSectionTarget = function () {
@@ -24,11 +26,13 @@ const messageSectionTarget = function () {
 		if(!userIsTyping()){
 			hasJoinedChat()
 			sendMessage()
+			userClickAffordance()
 			closeModal()
 			toTop()
 		}else{
 			sendMessage()
 			closeModal()
+			userClickAffordance()
 			toTop()
 		}
 	})
