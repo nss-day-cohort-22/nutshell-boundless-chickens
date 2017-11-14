@@ -162,3 +162,8 @@ input {
   padding: 10px;
   margin: 10px;
 }
+=======
+.userTag:hover {
+  cursor:pointer;
+  color:White;
+}

@@ -1,16 +1,17 @@
 const Db = require("./../Database/getDatabaseLocal")
-// Prints sent messages to the Dom
+
+// Prints sent messages to the Dom, and adds an add user affordance
 
 const displaySent = function () {
-	const messagesInjection =document.getElementById("messages_inject")
+	const messagesInjection = document.getElementById("messages_inject")
 	const database = Db()
 	database.messages.forEach((current)=>{
 		messagesInjection.innerHTML += `
-			<h3 class="userTag">User: ${current.userId}</h3>
-			<p class="userMessage">${current.message}</p>
+		<u><h3 class="userTag">${current.userId}</h3></u>
+		<p class="userMessage">${current.message}</p>
 		`
-	})
-	
+		console.log("Hello")
+	})	
 }
 
 module.exports = displaySent
