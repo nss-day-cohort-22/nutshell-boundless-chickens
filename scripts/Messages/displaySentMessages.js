@@ -10,6 +10,7 @@ const displaySent = function () {
 		<u><h3 class="userTag">${current.userId}</h3></u>
 		<p class="userMessage">${current.message}</p>
 		`
+		console.log("Hello")
 	})	
 }
 
