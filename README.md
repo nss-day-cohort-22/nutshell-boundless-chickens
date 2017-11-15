@@ -1,48 +1,21 @@
-# Nutshell: The Information Dashboard
+How to use our application;
 
-Nutshell is a new product offering that you have been tasked with building. It's a dashboard for people to use to organize their daily tasks, events, news article, friends, and chat messages.
+Eggshell. 
 
-You will be utilizing all of the skills and concepts that you've learned up to this point in the course.
-
-1. Functions
-1. Databases
-1. Github
-1. Objects
-1. CSS
-1. Generators
-1. Handling user events
-1. Factory functions
-1. Data entry/editing
-1. Modular code with Browserify
-1. Relational data
-
-To start you off, here's an example of what the database should look like once it's populated with some data from your application.
-
-```js
-const NutshellDatabase = {
-    "users": [
-        { "id": 1, "username": "Steve", "email": "me@me.com" },
-        { "id": 2, "username": "Mark", "email": "you@you.com" },
-        { "id": 3, "username": "Krista", "email": "foo@foo.com" }
-    ],
-    "messages": [
-        { "id": 1, "userId": 1, "message": "What's up?" }
-    ],
-    "news": [
-        { "id": 1, "userId": 2, "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/", "note": "Check out this recent discovery about workholes" }
-    ],
-    "friends": [
-        { "userId": 1, "friendId": 3 },
-        { "userId": 1, "friendId": 2 }
-    ],
-    "tasks": [
-        { "id": 1, "userId": 3, "task": "Take out garbage" }
-    ]
-}
-```
-
-## Professional Requirements
-
-1. All teammates must be using Grunt to run ESLint and Browserify during development
-1. Each module should have a comment at the top with the following info: author(s) and purpose of module
-1. The README for your project should include instructions on how another person can download and run the application
+1. git clone 
+2. NPM install 
+3. run grunt
+4. run your localHost http-server
+5. If an error occurs when registering open developer tools, and check your local storage for an object called "eggshellDatabase refresh the page and attempt again if your local storage is blank. 
+6. At any point that you would like to start fresh, clear your local storage of the "eggshellDatabase" object and be sure to refresh the page before attempting to register a new account. 
+7. Once logged in you will be presented with three sections to choose to interact with. 
+8. Messages works like a chat room where other people on your localHost can send messages 
+9. Every time you click the message section, a filler message will be sent informing the chat room that you have joined the conversation. 
+10. In chat, messages are editable, but only if it is your most recently sent message and as long as another user has not sent a message after your most recently sent message.
+11. When you edit a message it will fill the textfield with your most recent message, you then must click the send button.
+12. To view most recent messages sent from other users, or to see your edited message simply click refresh. 
+13. You can add friends directly from the chat room.
+14. Once a user is added,  close the friend's modal and open it again to view your current friends. 
+15. To add news articles, click "news" and fill out the form. This will be sent to local storage. To delete an article, click  "delete". This will remove the article from  the DOM and from local storage. Articles are sorted in descending date. To exit news, click the black x on the right of the modal.
+16. To logout click the button in the corner right, and it will take you back to the homepage.
+17. Any changes you've made will be saved to view when you log back in
