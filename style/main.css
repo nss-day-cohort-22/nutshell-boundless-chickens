@@ -43,7 +43,7 @@
 }
 
 body {
-  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVy_UlvjeJr4FLNMbfIBR2pv5BhPZriN9lhbBqLvYoZCiS4uaw_Q");
+  background: url("./../Egg.png");
   /* position: relative; */
   /* background-repeat:  */
   /* background-size:100% 100vh; */
@@ -162,7 +162,6 @@ input {
   padding: 10px;
   margin: 10px;
 }
-=======
 .userTag:hover {
   cursor:pointer;
   color:White;
